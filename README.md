@@ -1,20 +1,13 @@
-# takehomeexcersie_malika
-Python files include:
-1) Figuiring out the columns with Null values 
-2) Imputations for missing values in the arrived_to_restaurant_datetime
-3) Correlation Analysis: Delivery Time and Tip Amount
-4) Dataset with filled values derived from the imputations
-5) Added madeup year and month for each datetime column so that it will be easier to perform datetime functions in SQL
+# Data Analysis on DoorDash's Dataset of Monthly Deliveries: Project Overview 
 
-SQL Queries were used to find:
-1) Top 5 Restaurants for each region 
-2) Restaurants with lowest number of orders and total amount generated for DoorDash
-3) For each region, total number of orders and total order amount
-4) For each hour, total number of orders
-5) Total orders for each hour for each week over one monthspan (not included in the deliverable)
-6) Find returning consumers and identify their favorite restaurants 
+* Cleaned, aggregated, and analyzed a large unstructured 18,000+ dataset for monthly deliveries using Python and SQL to derive actionable insights 
+* Saved 40% of missing data in one of the timestamp columns through imputations 
+* Used cleaned quantitative data to develop an understanding of business KPIs (e.g. average order volume, number of returning customers)
+* Visualized findings using Google Sheets and Python 
 
+## Code and Resources Used:
+**Python Version:** 3.9
+**Packages**: pandas, numpy, jupyter notebooks
+**Relational database management system:** Postgresql 
+**GUI tool:** pgAdmin 4
 
-Visualisations: 
-After I have perfomred necessary SQL queries, I have downloaded the results and uploaded them to Google Sheet
-- All the visualisations were created using Google Sheets 
