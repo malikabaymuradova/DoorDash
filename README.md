@@ -6,8 +6,8 @@
 * Visualized findings using Google Sheets and Python 
 
 ## Code and Resources Used:
-**Python Version:** 3.9 /
-**Packages**: pandas, numpy, jupyter notebooks
-**Relational database management system:** Postgresql 
-**GUI tool:** pgAdmin 4
+* **Python Version:** 3.9 
+* **Packages**: pandas, numpy, jupyter notebooks
+* **Relational database management system:** Postgresql 
+* **GUI tool:** pgAdmin 4
 
