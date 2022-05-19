@@ -16,7 +16,7 @@ Analyze DoorDash's dataset and generate some specific recommendations or improve
 * **Relational database management system:** Postgresql 
 * **GUI tool:** pgAdmin 4
 
-## Dataset Details 
+# Dataset Details 
 
 * Customer order time
 * Order at restaurant time
@@ -32,12 +32,12 @@ Analyze DoorDash's dataset and generate some specific recommendations or improve
 
 ## Approach
 
-## Step 1: Familiarize yourself with the company's business model
+# Step 1: Familiarize yourself with the company's business model
 
-## Step 2: Data Cleaning 
+# Step 2: Data Cleaning 
 * Changed data types for all the delivery times columns. From character varying to timestamp format. 
 * Date and Time coumns only had day and time for each User Id. So, I used Python to generate randon month and year for each row so that it would be easier for me to work in SQL. It didn't affect the analysis, because the month and year was not taken into account. 
 
-## Step 3: EDA
+# Step 3: EDA
 
 
