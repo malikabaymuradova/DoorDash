@@ -56,8 +56,7 @@ This way we can help three sides of the DoorDash business:
 2) These top restaurants get more customers & Doordash gets to deepen relationships and show their value
 3) Consumers get better recommendations 
 
-Third, 
-
-<img width="311" alt="Screen Shot 2022-05-20 at 15 52 36" src="https://user-images.githubusercontent.com/104313288/169601488-2d95c1a8-7c28-4519-abe5-273712487df5.png">
+Third, let's identify 
+![Screen Shot 2022-05-20 at 16 47 20](https://user-images.githubusercontent.com/104313288/169608393-58a29c17-0ec4-4949-b3d7-e5ddc6a45c30.png)
 
 
