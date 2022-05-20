@@ -40,5 +40,5 @@ Analyze DoorDash's dataset and generate some specific recommendations or improve
 
 ### Step 3: EDA
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/malikabaymuradova/DoorDash/tree/main/AdditionalAnalysis "Number of Orders and Total Order Amount For Each Hour (2)")
 
