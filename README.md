@@ -46,6 +46,7 @@ As we can see from the graph above, 63% of total order volume is coming from Pal
 
 Second, let's investigate what restaurants are most popular in each region. This way we can (1) deepen relationships with restaurants that have the higest order volume or order amount, and (2) strategize future partenrhsips based on what people like in specific regions. 
 Region: Palo Alto
+
 ![Top 5 Restaurants](https://user-images.githubusercontent.com/104313288/169599167-9283c1f6-c137-4851-a37a-93e5be7a32e8.png)
 
 
