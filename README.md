@@ -44,4 +44,9 @@ First, I've decided to use geographical data to identify "in-demand" regions. Es
 
 As we can see from the graph above, 63% of total order volume is coming from Palo Alto Region. It would be strategically wise to allocate resources for targeted marketing campaigns and/or grow partnerships in Palo Alto as most of the demand is coming from there. However, it is recommended to investigate the reason for lower demand in other two regions, because it might be possible that a competotor is winning over other regions, and we DoorDash can strategize and build more partneships with local merchants.
 
-Second, I'v
+Second, let's investigate what restaurants are most popular in each region. This way we can (1) deepen relationships with restaurants that have the higest order volume or order amount, and (2) strategize future partenrhsips based on what people like in specific regions. 
+Region: Palo Alto
+![Top 5 Restaurants](https://user-images.githubusercontent.com/104313288/169599167-9283c1f6-c137-4851-a37a-93e5be7a32e8.png)
+
+
+
