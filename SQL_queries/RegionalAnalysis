@@ -1,0 +1,6 @@
+```sql
+SELECT "Delivery_region" AS DeliveryRegion, COUNT("Consumer_ID") AS TotalOrderVolume, ROUND(SUM("Order_total")) AS TotalOrderAmount
+FROM "DoorDash".doordash2
+WHERE "Delivery_region" <> 'None' 
+GROUP BY 1
+```
