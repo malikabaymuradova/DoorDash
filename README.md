@@ -39,7 +39,7 @@ Analyze DoorDash's dataset and generate some specific recommendations or improve
 * Date and Time coumns only had day and time for each User Id. So, I used Python to generate randon month and year for each row so that it would be easier for me to work in SQL. It didn't affect the analysis, because the month and year was not taken into account. 
 
 ### Step 3: EDA
-First, I've decided to use geographical data to identify "in-demand" regions. Essentially, understand from what region most of DoorDash's customer spending is coming from. *You can find Postgresql code [here]*(https://github.com/malikabaymuradova/DoorDash/blob/main/SQL_queries/all_sql_queries.sql)
+First, I've decided to use geographical data to identify "in-demand" regions. Essentially, understand from what region most of DoorDash's customer spending is coming from. *You can find Postgresql code [here](https://github.com/malikabaymuradova/DoorDash/blob/main/SQL_queries/all_sql_queries.sql)*
 <img width="828" alt="Screen Shot 2022-05-20 at 14 21 48" src="https://user-images.githubusercontent.com/104313288/169589592-f80852f8-8b9d-442a-a309-97ad37118ebe.png">
 
 As we can see from the graph above, 63% of total order volume is coming from Palo Alto Region. It would be strategically wise to allocate resources for targeted marketing campaigns and/or grow partnerships in Palo Alto as most of the demand is coming from there. However, it is recommended to investigate the reason for lower demand in other two regions, because it might be possible that a competotor is winning over other regions, and we DoorDash can strategize and build more partneships with local merchants.
