@@ -40,5 +40,5 @@ Analyze DoorDash's dataset and generate some specific recommendations or improve
 
 ### Step 3: EDA
 
-![alt text](https://github.com/malikabaymuradova/DoorDash/tree/main/AdditionalAnalysis "Number of Orders and Total Order Amount For Each Hour (2)")
+![alt text](https://github.com/malikabaymuradova/DoorDash/tree/main/AdditionalAnalysis "Total Order Amount and Total Order Volume In Each Delivery Region")
 
