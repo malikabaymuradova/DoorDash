@@ -39,5 +39,6 @@ Analyze DoorDash's dataset and generate some specific recommendations or improve
 * Date and Time coumns only had day and time for each User Id. So, I used Python to generate randon month and year for each row so that it would be easier for me to work in SQL. It didn't affect the analysis, because the month and year was not taken into account. 
 
 ### Step 3: EDA
-![Total Order Amount and Total Order Volume In Each Delivery Region](https://user-images.githubusercontent.com/104313288/169589009-35370f4a-aee1-43a2-b445-c86013f8813f.png)
+<img width="828" alt="Screen Shot 2022-05-20 at 14 21 48" src="https://user-images.githubusercontent.com/104313288/169589592-f80852f8-8b9d-442a-a309-97ad37118ebe.png">
+
 
