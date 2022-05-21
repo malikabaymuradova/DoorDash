@@ -44,7 +44,7 @@ First, I've decided to use geographical data to identify "in-demand" regions. Es
 
 As we can see from the graph above, **63% of total order volume is coming from Palo Alto Region**. It would be strategically wise to allocate resources for targeted marketing campaigns and/or grow partnerships in Palo Alto as most of the demand is coming from there. However, it is recommended to investigate the reason for lower demand in other two regions, because it might be possible that a competotor is winning over other regions, and we DoorDash can strategize and build more partneships with local merchants.
 
-Second, let's investigate what restaurants are most popular in each region. The goal is to (1) deepen relationships with restaurants that have the higest order volume or order amount, (2) strategize future partenrhsips based on what people like in specific regions. and (3) build better recommendations system for consumers to drive customer growth
+Second, let's investigate **what restaurants are most popular in each region**. The goal is to (1) deepen relationships with restaurants that have the higest order volume or order amount, (2) strategize future partenrhsips based on what people like in specific regions. and (3) build better recommendations system for consumers to drive customer growth
 
 <img width="730" alt="Screen Shot 2022-05-20 at 15 38 20" src="https://user-images.githubusercontent.com/104313288/169599745-a974992f-ca38-417d-9cb6-5feb34a67a5b.png">
 
@@ -56,7 +56,10 @@ This way we can help three sides of the DoorDash business:
 2) These top restaurants get more customers & Doordash gets to deepen relationships and show their value
 3) Consumers get better recommendations 
 
-Third, let's identify 
+Third, let's create a list of bottom 5% revenue generating restaurants. 
 ![Screen Shot 2022-05-20 at 16 47 20](https://user-images.githubusercontent.com/104313288/169608393-58a29c17-0ec4-4949-b3d7-e5ddc6a45c30.png)
+While it's important for DoorDash to strenghten the relationships with best performing merchants, it is also important to identify low performing ones because (1) DoorDash should identify causes of such performance: is it internal problem or external? (i.e. a problem with DoorDash tech integration, poor marketing that leads to mimimum exposure, poor dasher efficiency, or the restaurant food quality is bad, cometitiors, etc.)
 
+Fourth, let's find at what time order volume in a day order volume is at its highest. This way DoorDash can identify rush hours and (1) make sure that it has enough dashers ready to meet the demand on daily basis. Also, (2) DoorDash can share rush hours data with its dashers so that they can plan their work hours accordingly and earn more on deliveries and tips. *You can find Postgresql code [here](https://github.com/malikabaymuradova/DoorDash/blob/main/SQL_queries/all_sql_queries.sql)*
 
+![Number of Orders and Total Order Amount For Each Hour (2)](https://user-images.githubusercontent.com/104313288/169667901-74329f59-d039-498a-a509-3030a8534b1b.png)
