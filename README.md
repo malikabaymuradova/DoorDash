@@ -60,12 +60,30 @@ Third, let's create a list of bottom 5% revenue generating restaurants.
 ![Screen Shot 2022-05-20 at 16 47 20](https://user-images.githubusercontent.com/104313288/169608393-58a29c17-0ec4-4949-b3d7-e5ddc6a45c30.png)
 While it's important for DoorDash to strenghten the relationships with best performing merchants, it is also important to identify low performing ones because (1) DoorDash should identify causes of such performance: is it internal problem or external? (i.e. a problem with DoorDash tech integration, poor marketing that leads to mimimum exposure, poor dasher efficiency, or the restaurant food quality is bad, cometitiors, etc.)
 
-Fourth, let's find at what time order volume in a day order volume is at its highest. This way DoorDash can identify rush hours and (1) make sure that it has enough dashers ready to meet the demand on daily basis. Also, (2) DoorDash can share rush hours data with its dashers so that they can plan their work hours accordingly and earn more on deliveries and tips. *You can find Postgresql code [here](https://github.com/malikabaymuradova/DoorDash/blob/main/SQL_queries/all_sql_queries.sql)*
+Fourth, since datetime columns in the dataset are in the <day> <hour>:<minute>:<second> format, I made an assumption that Day 1 of the month is Monday, Day 2 is Tuesday, and etc. This way I amanged to analyze how the demand shifts throughout the week. Here's what I found:
+
+![Total Number Of Orders In a Week (1)](https://user-images.githubusercontent.com/104313288/169668685-872f246c-d731-4d9e-aa4f-1a087bbc4b39.png)
+  
+Expectedly, the demand is high between Friday - Sunday and low between Wednesday-Friday. Unexpectedly, the demand is alos high between Monday-Wednesday. But this kind of insights can highlight days where DoorDash have to especially (1) push for marketing, and (2) make sure they can meet the deman so that their delivery efficiency is not compromised.
+
+Fifth, let's find at what time order volume in a day order volume is at its highest. This way DoorDash can identify rush hours and (1) make sure that it has enough dashers ready to meet the demand on daily basis. Also, (2) DoorDash can share rush hours data with its dashers so that they can plan their work hours accordingly and earn more on deliveries and tips. *You can find Postgresql code [here](https://github.com/malikabaymuradova/DoorDash/blob/main/SQL_queries/all_sql_queries.sql)*
 
 ![Number of Orders and Total Order Amount For Each Hour (2)](https://user-images.githubusercontent.com/104313288/169667901-74329f59-d039-498a-a509-3030a8534b1b.png)
 
 While increase in the amount of orders placed after 4:00  PM is expected, late night orders are quite suprising. Also, there minimal to 0 demand between 5:00 AM - 2:00 PM.
 
-Fifth, let's investigate the dasher side of the business. From the graph below, you can see that the less the delivery time is, the more likely consumers to add tips for their dashers. Consumers primarily leave tips if dasher delivery time is under 75 minutes. 
+Sixth, let's investigate the dasher side of the business. From the graph below, you can see that the less the delivery time is, the more likely consumers to add tips for their dashers. Consumers primarily leave tips if dasher delivery time is under 75 minutes. 
 
 <img width="503" alt="Screen Shot 2022-05-21 at 16 36 37" src="https://user-images.githubusercontent.com/104313288/169668222-5c370bf1-6c90-4bb0-b283-05116eaecbf0.png">
+
+Lastly, I decided to dive into specifics and analyze consumer behavior. I was thinking about what kind of insights will be helpful to improve recommendation system & make it more personalized.
+
+![Consumer Order History  (3)](https://user-images.githubusercontent.com/104313288/169669091-37d05b75-3dd2-4fe1-944c-f04269870456.png)
+
+Explanation of the graph: This is a chart for one consumer (consumerID: 514). We can see how many orders this consumer placed (y-axis) with each restaurant (x-axis) in one month. 
+
+My goal is to show how can DoorDash use this ans similar data to (1) increase customer retention and (2) deepen relationships with their users
+  
+As the next step, I was aiming to show how can we use the same "order history" data for each consumer but for restaurants' benefit. 
+
+![Restaurant's Returning Customers   (1)](https://user-images.githubusercontent.com/104313288/169669317-754777b8-95f3-4941-8b20-f233d4028e84.png)
