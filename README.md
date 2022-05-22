@@ -101,7 +101,7 @@ ___
 Sixth, let's investigate the dasher side of the business. From the [graph](https://github.com/malikabaymuradova/DoorDash/blob/main/Python_and_Imputations_datasets/correlation_dasher_delivery_time_with_tips.ipynb) below, you can see that the less the delivery time is, the more likely consumers to add tips for their dashers. Consumers primarily leave tips if dasher delivery time is under 75 minutes. 
 
 <img width="503" alt="Screen Shot 2022-05-21 at 16 36 37" src="https://user-images.githubusercontent.com/104313288/169668222-5c370bf1-6c90-4bb0-b283-05116eaecbf0.png">
-______
+___
 
 Lastly, I decided to dive into specifics and analyze consumer behavior. I was thinking about what kind of insights will be helpful to improve recommendation system & make it more personalized.
 
