@@ -10,7 +10,7 @@
 ## Goal
 Analyze DoorDash's dataset and generate some specific recommendations or improvements on their business.
 
-## Code and Resources Used:
+## Code Used:
 * **Python Version:** 3.9 
 * **Packages**: pandas, numpy, jupyter notebooks
 * **Relational database management system:** Postgresql 
@@ -18,10 +18,10 @@ Analyze DoorDash's dataset and generate some specific recommendations or improve
 
 ### Dataset Details 
 
-* Customer order time
-* Order at restaurant time
-* Driver arrives at restaurant time
-* Order delivered time
+* Customer order time: <day><hour>:<min>:<sec>
+* Order at restaurant time:  <day><hour>:<min>:<sec>
+* Driver arrives at restaurant time:  <day><hour>:<min>:<sec>
+* Order delivered time: <day><hour>:<min>:<sec>
 * Delivery Region 
 * Driver ID
 * Customer ID
@@ -37,13 +37,26 @@ Analyze DoorDash's dataset and generate some specific recommendations or improve
 ### Step 2: Data Cleaning 
 * Changed data types for all the delivery times columns. From character varying to timestamp format. 
 * Date and Time coumns only had day and time for each User Id. So, I used Python to generate randon month and year for each row so that it would be easier for me to work in SQL. It didn't affect the analysis, because the month and year was not taken into account. 
+  
+#Dataset Uncertainties 
+1. About  ~ 25% of data in the "Driver arrives at restaurant time column" is missing
+**Solution** for this dataset uncertainty: (1) Delete Data or (2) Fill Missing Data
+However, deleting 25% of data will lead to biased results, so I’ve chosen to do imputations instead and save 25% of the data.
+  
+Imputations Approach
+
+The formula for my imputations is: “Order delivered time” - “The average dasher delivery time for each region”
+Where "average dasher delivery time for each region" is calculated by using this formula: “Order delivered time” - “Driver arrives at restaurant time”
+Then, GROUP BY the delivery region and calculate the average time interval
+
+In a real-life scenario, my imputations would be more complicated. I would GROUP BY not only by the delivery region but also by the IS_ASAP, Driver_ID, Restaurant_ID, and Consumer_ID. If I would have the address of the consumer, then I would use this as well in the calculation. 
 
 ### Step 3: EDA
 First, I've decided to use geographical data to identify "in-demand" regions. Essentially, understand from what region most of DoorDash's customer spending is coming from. *You can find Postgresql code [here](https://github.com/malikabaymuradova/DoorDash/blob/main/SQL_queries/all_sql_queries.sql)*
 <img width="828" alt="Screen Shot 2022-05-20 at 14 21 48" src="https://user-images.githubusercontent.com/104313288/169589592-f80852f8-8b9d-442a-a309-97ad37118ebe.png">
 
 As we can see from the graph above, **63% of total order volume is coming from Palo Alto Region**. It would be strategically wise to allocate resources for targeted marketing campaigns and/or grow partnerships in Palo Alto as most of the demand is coming from there. However, it is recommended to investigate the reason for lower demand in other two regions, because it might be possible that a competotor is winning over other regions, and we DoorDash can strategize and build more partneships with local merchants.
-
+---
 Second, let's investigate **what restaurants are most popular in each region**. The goal is to (1) deepen relationships with restaurants that have the higest order volume or order amount, (2) strategize future partenrhsips based on what people like in specific regions. and (3) build better recommendations system for consumers to drive customer growth
 
 <img width="730" alt="Screen Shot 2022-05-20 at 15 38 20" src="https://user-images.githubusercontent.com/104313288/169599745-a974992f-ca38-417d-9cb6-5feb34a67a5b.png">
