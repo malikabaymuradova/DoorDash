@@ -91,7 +91,7 @@ Fourth, since datetime columns in the dataset are in the <day> <hour>:<minute>:<
 ![Total Number Of Orders In a Week (1)](https://user-images.githubusercontent.com/104313288/169668685-872f246c-d731-4d9e-aa4f-1a087bbc4b39.png)
   
 Expectedly, the demand is high between Friday - Sunday and low between Wednesday-Friday. Unexpectedly, the demand is alos high between Monday-Wednesday. But this kind of insights can highlight days where DoorDash have to especially (1) push for marketing, and (2) make sure they can meet the deman so that their delivery efficiency is not compromised.
-
+___
 Fifth, let's find at what time order volume in a day order volume is at its highest. This way DoorDash can identify rush hours and (1) make sure that it has enough dashers ready to meet the demand on daily basis. Also, (2) DoorDash can share rush hours data with its dashers so that they can plan their work hours accordingly and earn more on deliveries and tips. *You can find Postgresql code [here](https://github.com/malikabaymuradova/DoorDash/blob/main/SQL_queries/all_sql_queries.sql)*
 
 ![Number of Orders and Total Order Amount For Each Hour (2)](https://user-images.githubusercontent.com/104313288/169667901-74329f59-d039-498a-a509-3030a8534b1b.png)
@@ -101,7 +101,7 @@ ___
 Sixth, let's investigate the dasher side of the business. From the [graph](https://github.com/malikabaymuradova/DoorDash/blob/main/Python_and_Imputations_datasets/correlation_dasher_delivery_time_with_tips.ipynb) below, you can see that the less the delivery time is, the more likely consumers to add tips for their dashers. Consumers primarily leave tips if dasher delivery time is under 75 minutes. 
 
 <img width="503" alt="Screen Shot 2022-05-21 at 16 36 37" src="https://user-images.githubusercontent.com/104313288/169668222-5c370bf1-6c90-4bb0-b283-05116eaecbf0.png">
-___
+______
 
 Lastly, I decided to dive into specifics and analyze consumer behavior. I was thinking about what kind of insights will be helpful to improve recommendation system & make it more personalized.
 
