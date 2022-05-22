@@ -72,7 +72,7 @@ Fifth, let's find at what time order volume in a day order volume is at its high
 
 While increase in the amount of orders placed after 4:00  PM is expected, late night orders are quite suprising. Also, there minimal to 0 demand between 5:00 AM - 2:00 PM.
 
-Sixth, let's investigate the dasher side of the business. From the graph below, you can see that the less the delivery time is, the more likely consumers to add tips for their dashers. Consumers primarily leave tips if dasher delivery time is under 75 minutes. 
+Sixth, let's investigate the dasher side of the business. From the [graph](https://github.com/malikabaymuradova/DoorDash/blob/main/Python_and_Imputations_datasets/correlation_dasher_delivery_time_with_tips.ipynb) below, you can see that the less the delivery time is, the more likely consumers to add tips for their dashers. Consumers primarily leave tips if dasher delivery time is under 75 minutes. 
 
 <img width="503" alt="Screen Shot 2022-05-21 at 16 36 37" src="https://user-images.githubusercontent.com/104313288/169668222-5c370bf1-6c90-4bb0-b283-05116eaecbf0.png">
 
