@@ -80,10 +80,29 @@ Lastly, I decided to dive into specifics and analyze consumer behavior. I was th
 
 ![Consumer Order History  (3)](https://user-images.githubusercontent.com/104313288/169669091-37d05b75-3dd2-4fe1-944c-f04269870456.png)
 
-Explanation of the graph: This is a chart for one consumer (consumerID: 514). We can see how many orders this consumer placed (y-axis) with each restaurant (x-axis) in one month. 
+*Explanation of the graph: This is a chart for one consumer (consumerID: 514). We can see how many orders this consumer placed (y-axis) with each restaurant (x-axis) in one month.*
 
-My goal is to show how can DoorDash use this ans similar data to (1) increase customer retention and (2) deepen relationships with their users
+My goal is to show how can DoorDash use this ans similar data to (1) increase customer retention and (2) deepen relationships with their users. With insights like this available for each consumer, comapanies like DoorDash can invest into more persoanlized in-app notifications to incentivize their users to place another order. Also, is data of similar sorts will be collected for each consumer, DoorDash can create cusotmer profiles that highlight their food pereferences, favorite cousines, and etc. This way we can create a more interactive user-experience and predict their behavior in a way that will yield to better restaurant recommendation system.
+  
+What I mean when I say user profile is that we can label eahc of our customer by giving them names i.e, adventurous or "noodles-lover" etc, so that (1) users get a more interesting in-app experince, and also (2) DoorDash gets a chance to better understand user behavior so that it can build more personalized recommendation system. 
   
 As the next step, I was aiming to show how can we use the same "order history" data for each consumer but for restaurants' benefit. 
 
 ![Restaurant's Returning Customers   (1)](https://user-images.githubusercontent.com/104313288/169669317-754777b8-95f3-4941-8b20-f233d4028e84.png)
+
+Since for in-demand delivery company like DoorDash its important to help create necessary exposure for their partnered merchants. It can use data like this & share it with them. This way restaurants will be able to see their most loyal consumers and from time to time gift them with something extra to show that they are aware of their "loyalty". 
+  
+### Summary of insights  
+
+* Data shows that there is more demand in Palo Alto and consumers order from restaurants that are located in Palo Alto the most
+* The highest demand for dashers is between 11:00PM-4:00AM and 4:00PM - 20:00 PM
+* There are a lot of customers that order from the same restaurants and a lot that experiment with their choices
+* Identified all the returning customers for each restaurant and the frequency of their orders at each restaurant
+* Identified Top 5 restaurants for each region based based on the total order number
+* Identified Lowest Revenue Generated restaurants for each region
+* A lot of restaurants are processing the order for over 50 minutes
+
+### Recommendations 
+  
+### Conclusion 
+
