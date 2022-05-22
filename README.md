@@ -39,17 +39,25 @@ Analyze DoorDash's dataset and generate some specific recommendations or improve
 * Date and Time coumns only had day and time for each User Id. So, I used Python to generate randon month and year for each row so that it would be easier for me to work in SQL. It didn't affect the analysis, because the month and year was not taken into account. 
   
 #Dataset Uncertainties 
-1. About  ~ 25% of data in the "Driver arrives at restaurant time column" is missing
+1. About  ~ 25% of data in the "Driver arrives at restaurant time" column is missing
 **Solution** for this dataset uncertainty: (1) Delete Data or (2) Fill Missing Data
 However, deleting 25% of data will lead to biased results, so I’ve chosen to do imputations instead and save 25% of the data.
   
-Imputations Approach
+**Imputations Approach**
 
 The formula for my imputations is: “Order delivered time” - “The average dasher delivery time for each region”
 Where "average dasher delivery time for each region" is calculated by using this formula: “Order delivered time” - “Driver arrives at restaurant time”
 Then, GROUP BY the delivery region and calculate the average time interval
 
 In a real-life scenario, my imputations would be more complicated. I would GROUP BY not only by the delivery region but also by the IS_ASAP, Driver_ID, Restaurant_ID, and Consumer_ID. If I would have the address of the consumer, then I would use this as well in the calculation. 
+  
+2. 40 Null values in the “Order at restaurant time” column
+**Solution**: (1) Delete Data 
+As it accounts for only 0.22% of the data, I decided to drop these rows to save some time. In a real-case scenario, I would replace the missing data with a similar process  I did for the missing values in the “Driver arrives at restaurant time” column. 
+
+3. Datetime format in this dataset is  <day> <hour>:<minute>:<second> 
+This puts certain limitations because I could not perform seasonality analysis, or analysis for each day of the week for a particular month to see the trends without needing to make assumptions that day 1 is Monday and Day 7 is Sunday.
+
 
 ### Step 3: EDA
 First, I've decided to use geographical data to identify "in-demand" regions. Essentially, understand from what region most of DoorDash's customer spending is coming from. *You can find Postgresql code [here](https://github.com/malikabaymuradova/DoorDash/blob/main/SQL_queries/all_sql_queries.sql)*
@@ -68,11 +76,11 @@ This way we can help three sides of the DoorDash business:
 1) New restaurants get more customers
 2) These top restaurants get more customers & Doordash gets to deepen relationships and show their value
 3) Consumers get better recommendations 
-
+___
 Third, let's create a list of bottom 5% revenue generating restaurants. 
 ![Screen Shot 2022-05-20 at 16 47 20](https://user-images.githubusercontent.com/104313288/169608393-58a29c17-0ec4-4949-b3d7-e5ddc6a45c30.png)
 While it's important for DoorDash to strenghten the relationships with best performing merchants, it is also important to identify low performing ones because (1) DoorDash should identify causes of such performance: is it internal problem or external? (i.e. a problem with DoorDash tech integration, poor marketing that leads to mimimum exposure, poor dasher efficiency, or the restaurant food quality is bad, cometitiors, etc.)
-
+___
 Fourth, since datetime columns in the dataset are in the <day> <hour>:<minute>:<second> format, I made an assumption that Day 1 of the month is Monday, Day 2 is Tuesday, and etc. This way I amanged to analyze how the demand shifts throughout the week. Here's what I found:
 
 ![Total Number Of Orders In a Week (1)](https://user-images.githubusercontent.com/104313288/169668685-872f246c-d731-4d9e-aa4f-1a087bbc4b39.png)
@@ -84,11 +92,11 @@ Fifth, let's find at what time order volume in a day order volume is at its high
 ![Number of Orders and Total Order Amount For Each Hour (2)](https://user-images.githubusercontent.com/104313288/169667901-74329f59-d039-498a-a509-3030a8534b1b.png)
 
 While increase in the amount of orders placed after 4:00  PM is expected, late night orders are quite suprising. Also, there minimal to 0 demand between 5:00 AM - 2:00 PM.
-
+___
 Sixth, let's investigate the dasher side of the business. From the [graph](https://github.com/malikabaymuradova/DoorDash/blob/main/Python_and_Imputations_datasets/correlation_dasher_delivery_time_with_tips.ipynb) below, you can see that the less the delivery time is, the more likely consumers to add tips for their dashers. Consumers primarily leave tips if dasher delivery time is under 75 minutes. 
 
 <img width="503" alt="Screen Shot 2022-05-21 at 16 36 37" src="https://user-images.githubusercontent.com/104313288/169668222-5c370bf1-6c90-4bb0-b283-05116eaecbf0.png">
-
+___
 Lastly, I decided to dive into specifics and analyze consumer behavior. I was thinking about what kind of insights will be helpful to improve recommendation system & make it more personalized.
 
 ![Consumer Order History  (3)](https://user-images.githubusercontent.com/104313288/169669091-37d05b75-3dd2-4fe1-944c-f04269870456.png)
@@ -98,7 +106,7 @@ Lastly, I decided to dive into specifics and analyze consumer behavior. I was th
 My goal is to show how can DoorDash use this ans similar data to (1) increase customer retention and (2) deepen relationships with their users. With insights like this available for each consumer, comapanies like DoorDash can invest into more persoanlized in-app notifications to incentivize their users to place another order. Also, is data of similar sorts will be collected for each consumer, DoorDash can create cusotmer profiles that highlight their food pereferences, favorite cousines, and etc. This way we can create a more interactive user-experience and predict their behavior in a way that will yield to better restaurant recommendation system.
   
 What I mean when I say user profile is that we can label eahc of our customer by giving them names i.e, adventurous or "noodles-lover" etc, so that (1) users get a more interesting in-app experince, and also (2) DoorDash gets a chance to better understand user behavior so that it can build more personalized recommendation system. 
-  
+___
 As the next step, I was aiming to show how can we use the same "order history" data for each consumer but for restaurants' benefit. 
 
 ![Restaurant's Returning Customers   (1)](https://user-images.githubusercontent.com/104313288/169669317-754777b8-95f3-4941-8b20-f233d4028e84.png)
@@ -115,7 +123,7 @@ Since for in-demand delivery company like DoorDash its important to help create 
 * Identified Lowest Revenue Generated restaurants for each region
 * A lot of restaurants are processing the order for over 50 minutes
 
-### Recommendations 
+### Step 4: Recommendations 
   
 ### Conclusion 
 
