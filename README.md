@@ -45,7 +45,7 @@ Analyze DoorDash's dataset and generate some specific recommendations or improve
 
 However, deleting 25% of data will lead to biased results, so I’ve chosen to do imputations instead and save 25% of the data.
   
-**Imputations Approach**
+[**Imputations Approach**](https://github.com/malikabaymuradova/DoorDash/blob/main/Python_and_Imputations_datasets/imputation_for_data.ipynb)
 
 The formula for my imputations is: “Order delivered time” - “The average dasher delivery time for each region”
 
