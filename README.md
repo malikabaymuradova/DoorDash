@@ -102,6 +102,7 @@ Sixth, let's investigate the dasher side of the business. From the [graph](https
 
 <img width="503" alt="Screen Shot 2022-05-21 at 16 36 37" src="https://user-images.githubusercontent.com/104313288/169668222-5c370bf1-6c90-4bb0-b283-05116eaecbf0.png">
 ___
+
 Lastly, I decided to dive into specifics and analyze consumer behavior. I was thinking about what kind of insights will be helpful to improve recommendation system & make it more personalized.
 
 ![Consumer Order History  (3)](https://user-images.githubusercontent.com/104313288/169669091-37d05b75-3dd2-4fe1-944c-f04269870456.png)
