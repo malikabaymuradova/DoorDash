@@ -40,12 +40,14 @@ Analyze DoorDash's dataset and generate some specific recommendations or improve
   
 ### Dataset Uncertainties 
 1. About  **~ 25% of data** in the "Driver arrives at restaurant time" column is **missing**
-  **Solution** for this dataset uncertainty: (1) Delete Data or (2) Fill Missing Data
-  However, deleting 25% of data will lead to biased results, so I’ve chosen to do imputations instead and save 25% of the data.
+  
+**Solution** for this dataset uncertainty: (1) Delete Data or (2) Fill Missing Data
+However, deleting 25% of data will lead to biased results, so I’ve chosen to do imputations instead and save 25% of the data.
   
 **Imputations Approach**
 
 The formula for my imputations is: “Order delivered time” - “The average dasher delivery time for each region”
+
 Where "average dasher delivery time for each region" is calculated by using this formula: “Order delivered time” - “Driver arrives at restaurant time”
 Then, GROUP BY the delivery region and calculate the average time interval
 
