@@ -38,8 +38,8 @@ Analyze DoorDash's dataset and generate some specific recommendations or improve
 * Changed data types for all the delivery times columns. From character varying to timestamp format. 
 * Date and Time coumns only had day and time for each User Id. So, I used Python to generate randon month and year for each row so that it would be easier for me to work in SQL. It didn't affect the analysis, because the month and year was not taken into account. 
   
-#Dataset Uncertainties 
-1. About  ~ 25% of data in the "Driver arrives at restaurant time" column is missing
+### Dataset Uncertainties 
+1. About  ~ 25% of data in the "Driver arrives at restaurant time" column is missing 
 **Solution** for this dataset uncertainty: (1) Delete Data or (2) Fill Missing Data
 However, deleting 25% of data will lead to biased results, so I’ve chosen to do imputations instead and save 25% of the data.
   
